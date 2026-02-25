@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Craftnevia – Segera Hadir</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brown-dark:  #3d2817;
+      --brown:       #6b4423;
+      --orange:      #c8621e;
+      --text-mid:    #6b5d52;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      color: var(--brown-dark);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ── ANIMATED BACKGROUND ── */
+    body {
+      background: #e8dfd5;
+    }
+
+    .bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    /* ── PAGE LAYOUT ── */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 32px;
+      max-width: 540px;
+      width: 100%;
+      padding: 60px 50px;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── HEADER TITLE ── */
+    .header-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--brown-dark);
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--brown);
+      margin-bottom: 48px;
+    }
+
+    /* ── LOGO ── */
+    .logo-wrap {
+      margin-bottom: 48px;
+    }
+
+    .logo-wrap img {
+      width: 220px;
+      height: auto;
+    }
+
+    /* ── BODY TEXT ── */
+    .body-text {
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 48px;
+    }
+
+    /* ── SOCIAL SECTION ── */
+    .social-label {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--brown-dark);
+      margin-bottom: 4px;
+    }
+
+    .social-sublabel {
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--text-mid);
+      margin-bottom: 24px;
+    }
+
+    .social-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .social-btn {
+      width: 56px; 
+      height: 56px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2px solid #d4ccc4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brown);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-btn:hover {
+      background: var(--brown-dark);
+      border-color: var(--brown-dark);
+      color: #ffffff;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .social-btn svg {
+      width: 22px; 
+      height: 22px;
+      fill: currentColor;
+    }
+
+    /* ── COPYRIGHT ── */
+    .copyright {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      color: #999;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 48px 32px; }
+      .header-title { font-size: 28px; }
+      .subtitle { font-size: 16px; }
+      .logo-wrap img { width: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated background canvas -->
+  <canvas class="bg-canvas" id="bgCanvas"></canvas>
+
+  <div class="page">
+    <div class="card">
+
+      <!-- Header -->
+      <h1 class="header-title">SEGERA HADIR</h1>
+      <p class="subtitle">Website E-Commerce</p>
+
+      <!-- Logo -->
+      <div class="logo-wrap">
+        <img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%3Csvg%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%202358%202872%22%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xml%3Aspace%3D%22preserve%22%20xmlns%3Aserif%3D%22http%3A//www.serif.com/%22%20style%3D%22fill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%3Bstroke-miterlimit%3A1.5%3B%22%3E%3Crect%20id%3D%22Logo--Nama--Tagline%22%20serif%3Aid%3D%22Logo%2C%20Nama%2C%20Tagline%22%20x%3D%220%22%20y%3D%220%22%20width%3D%222357.508%22%20height%3D%222871.354%22%20style%3D%22fill%3Anone%3B%22/%3E%3Cg%20transform%3D%22matrix%28533.333333%2C0%2C0%2C533.333333%2C2151.55398%2C2744.113369%29%22%3E%3C/g%3E%3Ctext%20x%3D%22194.221px%22%20y%3D%222744.113px%22%20style%3D%22font-family%3A%27BebasNeue-Regular%27%2C%20%27Bebas%20Neue%27%2C%20sans-serif%3Bfont-size%3A533.333px%3Bfill%3A%233e2723%3B%22%3ECRAF%3Ctspan%20x%3D%221016.087px%20%22%20y%3D%222744.113px%20%22%3ET%3C/tspan%3ENEVIA%3C/text%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M2145.154%2C572.193l0%2C1179.824l-966.4%2C475.247l0%2C-1179.824l966.4%2C-475.247Z%22%20style%3D%22fill%3Anone%3Bstroke%3A%233e2723%3Bstroke-width%3A62.5px%3B%22/%3E%3Cg%3E%3Cpath%20d%3D%22M1682.677%2C1490.893c-0%2C5.184%202.677%2C10.001%207.079%2C12.738c4.403%2C2.737%209.906%2C3.008%2014.556%2C0.714c18.266%2C-9.01%2036.533%2C-18.019%2054.799%2C-27.029c4.649%2C-2.293%2010.153%2C-2.023%2014.556%2C0.714c4.403%2C2.737%207.079%2C7.554%207.079%2C12.738c0%2C74.016%200%2C148.032%20-0%2C222.048c-0%2C5.178%202.671%2C9.991%207.066%2C12.73c4.395%2C2.739%209.891%2C3.018%2014.541%2C0.737c55.506%2C-27.229%20111.013%2C-54.459%20166.519%2C-81.688c5.138%2C-2.52%208.394%2C-7.744%208.394%2C-13.467c0%2C-229.487%200%2C-458.974%200%2C-688.461c0%2C-5.194%20-2.687%2C-10.018%20-7.102%2C-12.752c-4.415%2C-2.735%20-9.931%2C-2.991%20-14.581%2C-0.676c-55.506%2C27.624%20-111.013%2C55.248%20-166.519%2C82.872c-5.096%2C2.536%20-8.317%2C7.737%20-8.317%2C13.429c0%2C53.855%20-0%2C107.709%200%2C161.564c-0%2C5.699%20-3.23%2C10.906%20-8.336%2C13.438c-22.69%2C11.252%20-45.38%2C22.504%20-68.07%2C33.755c-4.65%2C2.306%20-10.161%2C2.044%20-14.571%2C-0.692c-4.41%2C-2.736%20-7.093%2C-7.557%20-7.093%2C-12.747c0%2C-13.87%200%2C-27.74%200%2C-41.61c-0%2C-5.192%20-2.685%2C-10.014%20-7.098%2C-12.75c-4.413%2C-2.735%20-9.926%2C-2.994%20-14.576%2C-0.684c-18.199%2C9.041%20-36.397%2C18.082%20-54.596%2C27.122c-4.65%2C2.31%20-10.163%2C2.051%20-14.576%2C-0.684c-4.413%2C-2.735%20-7.098%2C-7.558%20-7.098%2C-12.75c-0%2C-13.828%20-0%2C-27.656%20-0%2C-41.484c0%2C-5.194%20-2.687%2C-10.018%20-7.102%2C-12.752c-4.415%2C-2.735%20-9.931%2C-2.991%20-14.581%2C-0.676c-55.169%2C27.456%20-110.338%2C54.912%20-165.507%2C82.369c-5.096%2C2.536%20-8.317%2C7.737%20-8.317%2C13.429c0%2C228.165%200%2C456.33%200%2C684.495c0%2C5.178%202.671%2C9.991%207.066%2C12.73c4.395%2C2.739%209.891%2C3.018%2014.541%2C0.737c55.169%2C-27.064%20110.338%2C-54.128%20165.507%2C-81.192c5.138%2C-2.52%208.394%2C-7.744%208.394%2C-13.467c0%2C-113.651%200%2C-227.301%200%2C-340.952c-0%2C-5.707%203.239%2C-10.92%208.355%2C-13.448c22.648%2C-11.191%2045.295%2C-22.381%2067.943%2C-33.572c4.649%2C-2.297%2010.156%2C-2.03%2014.561%2C0.707c4.405%2C2.737%207.084%2C7.555%207.084%2C12.741l0%2C41.725Z%22%20style%3D%22fill%3A%23d2691e%3B%22/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cpath%20d%3D%22M212.354%2C1752.017l0%2C-1179.824l966.4%2C475.247l0%2C1179.824l-966.4%2C-475.247Z%22%20style%3D%22fill%3Anone%3Bstroke%3A%233e2723%3Bstroke-width%3A62.5px%3B%22/%3E%3Cg%3E%3Cpath%20d%3D%22M478.717%2C1694.07c0.004%2C5.754%203.299%2C11%208.482%2C13.5c133.143%2C64.235%20266.287%2C128.469%20399.43%2C192.704c4.653%2C2.245%2010.135%2C1.937%2014.508%2C-0.815c4.373%2C-2.752%207.021%2C-7.561%207.01%2C-12.728c-0.036%2C-16.698%20-0.072%2C-33.395%20-0.108%2C-50.093c-0.011%2C-5.17%202.641%2C-9.982%207.018%2C-12.733c4.377%2C-2.751%209.863%2C-3.054%2014.517%2C-0.801c21.175%2C10.25%2042.351%2C20.5%2063.526%2C30.749c4.655%2C2.253%2010.141%2C1.95%2014.519%2C-0.803c4.378%2C-2.752%207.029%2C-7.566%207.016%2C-12.737c-0.137%2C-54.088%20-0.275%2C-108.177%20-0.412%2C-162.265c-0.015%2C-5.723%20-3.285%2C-10.94%20-8.43%2C-13.446c-61.168%2C-29.803%20-122.335%2C-59.606%20-183.503%2C-89.408c-4.653%2C-2.267%20-10.146%2C-1.975%20-14.533%2C0.773c-4.387%2C2.748%20-7.046%2C7.563%20-7.037%2C12.739c0.03%2C16.679%200.06%2C33.358%200.09%2C50.038c0.009%2C5.173%20-2.647%2C9.985%20-7.029%2C12.734c-4.382%2C2.749%20-9.871%2C3.046%20-14.524%2C0.786c-61.519%2C-29.876%20-123.038%2C-59.752%20-184.557%2C-89.628c-5.162%2C-2.507%20-8.441%2C-7.739%20-8.447%2C-13.477c-0.125%2C-119.932%20-0.249%2C-239.865%20-0.374%2C-359.797c-0.005%2C-5.184%202.667%2C-10.004%207.067%2C-12.746c4.4%2C-2.742%209.904%2C-3.018%2014.555%2C-0.729c61.429%2C30.224%20122.859%2C60.448%20184.288%2C90.672c5.12%2C2.519%208.368%2C7.726%208.378%2C13.432c0.047%2C26.434%200.095%2C52.868%200.142%2C79.302c0.01%2C5.713%203.265%2C10.925%208.395%2C13.441c61.111%2C29.97%20122.221%2C59.94%20183.332%2C89.91c4.655%2C2.283%2010.159%2C2%2014.556%2C-0.748c4.397%2C-2.748%207.062%2C-7.572%207.049%2C-12.757c-0.137%2C-53.941%20-0.274%2C-107.882%20-0.411%2C-161.823c-0.014%2C-5.696%20-3.253%2C-10.892%20-8.361%2C-13.413c-29.938%2C-14.778%20-59.876%2C-29.555%20-89.814%2C-44.333c-5.109%2C-2.522%20-8.348%2C-7.721%20-8.361%2C-13.418c-0.057%2C-26.374%20-0.114%2C-52.748%20-0.171%2C-79.121c-0.012%2C-5.691%20-3.244%2C-10.884%20-8.343%2C-13.41c-132.768%2C-65.747%20-265.537%2C-131.493%20-398.305%2C-197.24c-4.651%2C-2.303%20-10.162%2C-2.038%20-14.571%2C0.7c-4.409%2C2.739%20-7.089%2C7.562%20-7.085%2C12.752c0.011%2C16.662%200.022%2C33.324%200.033%2C49.986c0.003%2C5.187%20-2.673%2C10.007%20-7.077%2C12.747c-4.404%2C2.74%20-9.911%2C3.01%20-14.562%2C0.714c-21.478%2C-10.601%20-42.955%2C-21.203%20-64.433%2C-31.804c-4.65%2C-2.295%20-10.156%2C-2.026%20-14.56%2C0.712c-4.404%2C2.738%20-7.081%2C7.557%20-7.08%2C12.743c0.053%2C186.085%200.106%2C372.171%200.158%2C558.256c0.002%2C5.75%203.29%2C10.992%208.465%2C13.497c30.346%2C14.689%2060.691%2C29.377%2091.037%2C44.066c5.173%2C2.504%208.461%2C7.744%208.465%2C13.492c0.018%2C26.61%200.035%2C53.22%200.053%2C79.83Z%22%20style%3D%22fill%3A%238b4513%3B%22/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cpath%20d%3D%22M212.354%2C572.193l966.4%2C-475.247l966.4%2C475.247l-966.4%2C475.247l-966.4%2C-475.247Z%22%20style%3D%22fill%3Anone%3Bstroke%3A%233e2723%3Bstroke-width%3A62.5px%3B%22/%3E%3Cpath%20d%3D%22M212.354%2C572.193l966.4%2C-475.247l966.4%2C475.247l-966.4%2C475.247l-966.4%2C-475.247Zm161.896%2C-17.947c-6.841%2C3.364%20-11.174%2C10.324%20-11.174%2C17.947c0%2C7.623%204.333%2C14.583%2011.174%2C17.947c150.412%2C73.968%20718.011%2C353.096%20795.678%2C391.291c5.566%2C2.737%2012.086%2C2.737%2017.652%2C-0c77.667%2C-38.194%20645.267%2C-317.323%20795.678%2C-391.291c6.841%2C-3.364%2011.174%2C-10.324%2011.174%2C-17.947c-0%2C-7.623%20-4.333%2C-14.583%20-11.174%2C-17.947c-150.412%2C-73.968%20-718.011%2C-353.096%20-795.678%2C-391.291c-5.566%2C-2.737%20-12.086%2C-2.737%20-17.652%2C-0c-77.667%2C38.194%20-645.267%2C317.323%20-795.678%2C391.291Z%22%20style%3D%22fill%3A%233e2723%3B%22/%3E%3Cpath%20d%3D%22M500.891%2C585.653c-5.13%2C-2.523%20-8.381%2C-7.743%20-8.381%2C-13.46c0%2C-5.717%203.25%2C-10.937%208.381%2C-13.46c122.07%2C-60.03%20613.56%2C-301.731%20676.383%2C-332.625c4.174%2C-2.053%209.065%2C-2.053%2013.239%2C0c62.822%2C30.894%20554.313%2C272.595%20676.383%2C332.625c5.13%2C2.523%208.381%2C7.743%208.381%2C13.46c-0%2C5.717%20-3.25%2C10.937%20-8.381%2C13.46c-122.07%2C60.03%20-613.56%2C301.731%20-676.383%2C332.625c-4.174%2C2.053%20-9.065%2C2.053%20-13.239%2C0c-62.822%2C-30.894%20-554.313%2C-272.595%20-676.383%2C-332.625Zm91.438%2C-26.921c-5.13%2C2.523%20-8.381%2C7.743%20-8.381%2C13.46c0%2C5.717%203.25%2C10.937%208.381%2C13.46c111.386%2C54.776%20527.397%2C259.358%20584.945%2C287.658c4.174%2C2.053%209.065%2C2.053%2013.239%2C0c57.548%2C-28.3%20473.559%2C-232.882%20584.945%2C-287.658c5.13%2C-2.523%208.381%2C-7.743%208.381%2C-13.46c-0%2C-5.717%20-3.25%2C-10.937%20-8.381%2C-13.46c-111.386%2C-54.776%20-527.397%2C-259.358%20-584.945%2C-287.658c-4.174%2C-2.053%20-9.065%2C-2.053%20-13.239%2C0c-57.548%2C28.3%20-473.559%2C232.882%20-584.945%2C287.658Z%22%20style%3D%22fill%3A%233e2723%3B%22/%3E%3Cpath%20d%3D%22M870.581%2C581.166c-3.42%2C-1.682%20-5.587%2C-5.162%20-5.587%2C-8.974c-0%2C-3.812%202.167%2C-7.292%205.587%2C-8.974c63.92%2C-31.434%20275.642%2C-135.553%20308.899%2C-151.907c2.783%2C-1.369%206.043%2C-1.369%208.826%2C0c33.257%2C16.355%20244.979%2C120.473%20308.899%2C151.907c3.42%2C1.682%205.587%2C5.162%205.587%2C8.974c0%2C3.812%20-2.167%2C7.292%20-5.587%2C8.974c-63.92%2C31.434%20-275.642%2C135.553%20-308.899%2C151.907c-2.783%2C1.369%20-6.043%2C1.369%20-8.826%2C0c-33.257%2C-16.355%20-244.979%2C-120.473%20-308.899%2C-151.907Zm91.438%2C-17.947c-3.42%2C1.682%20-5.587%2C5.162%20-5.587%2C8.974c-0%2C3.812%202.167%2C7.292%205.587%2C8.974c50.613%2C24.89%20190.792%2C93.826%20217.461%2C106.941c2.783%2C1.369%206.043%2C1.369%208.826%2C0c26.668%2C-13.115%20166.848%2C-82.051%20217.461%2C-106.941c3.42%2C-1.682%205.587%2C-5.162%205.587%2C-8.974c0%2C-3.812%20-2.167%2C-7.292%20-5.587%2C-8.974c-50.613%2C-24.89%20-190.792%2C-93.826%20-217.461%2C-106.941c-2.783%2C-1.369%20-6.043%2C-1.369%20-8.826%2C-0c-26.668%2C13.115%20-166.848%2C82.051%20-217.461%2C106.941Z%22%20style%3D%22fill%3A%233e2723%3B%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Craftnevia Logo" />
+      </div>
+
+      <!-- Body copy -->
+      <p class="body-text">
+        Kabar baik! Craftnevia, spesialis mebel kayu jati dari jepara 
+        akan meluncurkan website e-commerce. Anda akan dapat 
+        berbelanja mebel premium dengan praktis.
+      </p>
+
+      <!-- Social -->
+      <p class="social-label">Ikuti sosial media kami untuk</p>
+      <p class="social-sublabel">informasi selanjutnya dan penawaran eksklusif!</p>
+      
+      <div class="social-row">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/craftnevia?igsh=MWxvNnB4ZGxwdzJnZA==" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/18D6HBtWxA/" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/message/DMDEUFD7M6VQL1" class="social-btn" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:craftnevia@gmail.com" class="social-btn" aria-label="Email">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="copyright">© 2026 Craftnevia</p>
+
+    </div>
+  </div>
+
+  <script>
+    // ── Animated Color Gradient Background ──
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Color palette - starting from Red, Yellow, Blue and creating smooth transitions
+    const colors = [
+      // Primary colors
+      { r: 255, g: 80, b: 80 },    // Red
+      { r: 255, g: 180, b: 60 },   // Orange (Red + Yellow)
+      { r: 255, g: 220, b: 80 },   // Yellow
+      { r: 180, g: 220, b: 100 },  // Yellow-Green
+      { r: 100, g: 200, b: 120 },  // Green (Yellow + Blue)
+      { r: 80, g: 180, b: 180 },   // Cyan (Blue + Green)
+      { r: 100, g: 150, b: 230 },  // Blue
+      { r: 150, g: 120, b: 230 },  // Purple (Blue + Red)
+      { r: 220, g: 120, b: 200 },  // Magenta (Red + Blue)
+      { r: 255, g: 140, b: 140 }   // Light Red (back to start)
+    ];
+
+    let colorIndex = 0;
+    let nextColorIndex = 1;
+    let colorTransition = 0;
+
+    function interpolateColor(color1, color2, factor) {
+      return {
+        r: Math.round(color1.r + (color2.r - color1.r) * factor),
+        g: Math.round(color1.g + (color2.g - color1.g) * factor),
+        b: Math.round(color1.b + (color2.b - color1.b) * factor)
+      };
+    }
+
+    function createGradient(color1, color2) {
+      // Create diagonal gradient
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      
+      const c1 = interpolateColor(color1, color2, colorTransition);
+      const c2 = interpolateColor(
+        colors[(colorIndex + 2) % colors.length], 
+        colors[(nextColorIndex + 2) % colors.length], 
+        colorTransition
+      );
+      
+      gradient.addColorStop(0, `rgba(${c1.r}, ${c1.g}, ${c1.b}, 0.7)`);
+      gradient.addColorStop(0.5, `rgba(${Math.round((c1.r + c2.r) / 2)}, ${Math.round((c1.g + c2.g) / 2)}, ${Math.round((c1.b + c2.b) / 2)}, 0.8)`);
+      gradient.addColorStop(1, `rgba(${c2.r}, ${c2.g}, ${c2.b}, 0.7)`);
+      
+      return gradient;
+    }
+
+    function animate() {
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw gradient background
+      const currentColor = colors[colorIndex];
+      const nextColor = colors[nextColorIndex];
+      
+      ctx.fillStyle = createGradient(currentColor, nextColor);
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Update color transition
+      colorTransition += 0.003; // Slower transition for smoother effect
+
+      if (colorTransition >= 1) {
+        colorTransition = 0;
+        colorIndex = (colorIndex + 1) % colors.length;
+        nextColorIndex = (nextColorIndex + 1) % colors.length;
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+
+</body>
+</html>
